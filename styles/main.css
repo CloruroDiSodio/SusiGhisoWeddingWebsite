@@ -1,3 +1,19 @@
+:root {
+    --background-1: #FFFFFF;
+    --backoground-2: #FEF5EF;
+    --content: #2C2728;
+    --pink-light: #FEEDEF;
+    --pink: #FFB8C2;
+    --cherry-light: #AA0A27;
+    --cherry-dark: #74071B;
+    --light-green: #DFE5BB;
+    --green: #A8BD8D;
+    --dark-green: #284602;
+    --light-blue: #CBE7FF;
+    --blue: #69B8FD;
+    --dark-blue: #00447E;
+}
+
 body {
     font-family: "EB Garamond", serif; ;
 }
