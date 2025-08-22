@@ -16,4 +16,55 @@
 
 body {
     font-family: "EB Garamond", serif; ;
+    padding: 24px 32px;
 }
+
+/* UI */
+
+.button-small {
+    border: 2px solid;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+/* NAV */
+
+nav {
+    padding: 24px 32px;
+}
+
+.nav-item {
+    padding: 8px 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--content);
+    position: relative;
+}
+
+.nav-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--content);
+    transition: width 0.3s;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+}
+
+.nav-item-rsvp {
+    border-color: var(--cherry-light);
+    color: var(--cherry-light);
+}
+
+.nav-item-rsvp:hover {
+    background-color: var(--pink-light);
+}
+
