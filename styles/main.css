@@ -76,6 +76,13 @@ body {
 .nav-item-rsvp {
     border-color: var(--cherry-light);
     color: var(--cherry-light);
+    margin-top: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-item-rsvp {
+        margin-top: unset;
+}
 }
 
 .nav-item-rsvp:hover {
@@ -83,12 +90,12 @@ body {
 }
 
 /* MOBILE NAVIGATION */
-.nav-mobile-trigger {
-    display: block;
+.nav-mobile-header {
+    display: flex;
 }
 
 @media screen and (min-width: 1024px) {
-    .nav-mobile-trigger {
+   .nav-mobile-header {
         display: none;
     }
 }
