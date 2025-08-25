@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Susi & Ghiso Wedding</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Susi & Ghiso Wedding</title>
 </head>
 <body class="relative">
-    <nav class="flex justify-between items-center fixed top-0 left-0 w-full">
-        <img src="media/logo.png" alt="logo">
-        <ul class="flex gap-10 items-center">
-            <li><a href="#dettagli" class="nav-item">Dettagli</a></li>
-            <li><a href="#regaloNozze" class="nav-item">Regalo di nozze</a></li>
-            <li><a href="#qea" class="nav-item">Q&A</a></li>
-            <li><a href="/rsvp" class="button-small nav-item-rsvp">RSVP</a></li>
-        </ul>
-    </nav>
-    <script src="js/main.js"></script>
+
+  <!-- NAV DESKTOP -->
+  <nav class="nav-desktop fixed top-0 left-0 w-full flex justify-between items-center">
+    <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
+    <div id="menu-items"></div>
+  </nav>
+
+  <!-- MOBILE TRIGGER -->
+  <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+
+  <!-- NAV MOBILE -->
+  <nav class="nav-mobile pointer-events-none opacity-0 absolute top-0 left-0 w-screen h-screen p-4 bg-white">
+    <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
+      <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
+      <button class="nav-mobile-close" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="menu-items-mobile"></div>
+  </nav>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

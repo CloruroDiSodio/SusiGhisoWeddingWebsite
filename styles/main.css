@@ -1,6 +1,7 @@
+/* COLOR VARIABLES */
 :root {
     --background-1: #FFFFFF;
-    --backoground-2: #FEF5EF;
+    --background-2: #FEF5EF;
     --content: #2C2728;
     --pink-light: #FEEDEF;
     --pink: #FFB8C2;
@@ -14,13 +15,19 @@
     --dark-blue: #00447E;
 }
 
+/* BODY */
 body {
-    font-family: "EB Garamond", serif; ;
-    padding: 24px 32px;
+    font-family: "EB Garamond", serif;
+    padding: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 24px 32px;
+    }
 }
 
 /* UI */
-
 .button-small {
     border: 2px solid;
     padding: 8px 16px;
@@ -30,10 +37,16 @@ body {
     transition: background-color 0.3s;
 }
 
-/* NAV */
-
-nav {
+/* DESKTOP NAVIGATION */
+.nav-desktop {
     padding: 24px 32px;
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-desktop {
+        display: flex;
+    }
 }
 
 .nav-item {
@@ -44,7 +57,7 @@ nav {
     position: relative;
 }
 
-.nav-item:after {
+.nav-item::after {
     content: '';
     display: block;
     position: absolute;
@@ -56,7 +69,7 @@ nav {
     transition: width 0.3s;
 }
 
-.nav-item:hover:after {
+.nav-item:hover::after {
     width: 100%;
 }
 
@@ -69,3 +82,23 @@ nav {
     background-color: var(--pink-light);
 }
 
+/* MOBILE NAVIGATION */
+.nav-mobile-trigger {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-mobile-trigger {
+        display: none;
+    }
+}
+
+.nav-mobile {
+    background-color: var(--background-1);
+}
+
+.nav-mobile-actions {
+    border-bottom: 1px solid var(--content);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
