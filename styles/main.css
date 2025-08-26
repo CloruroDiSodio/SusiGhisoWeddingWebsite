@@ -16,15 +16,34 @@
 }
 
 /* BODY */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: "EB Garamond", serif;
-    padding: 16px;
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
 }
 
 @media screen and (min-width: 1024px) {
     body {
-        padding: 24px 32px;
+        padding: 0 32px 24px;
+        column-gap: 16px;
     }
+}
+
+/* Utility */
+
+.rounded-48 {
+    border-radius: 48px;
+}
+
+.font-family-italiana {
+    font-family: "Italiana", serif;
 }
 
 /* UI */
@@ -41,6 +60,7 @@ body {
 .nav-desktop {
     padding: 24px 32px;
     display: none;
+    background-color: var(--background-1);
 }
 
 @media screen and (min-width: 1024px) {
@@ -53,6 +73,7 @@ body {
     padding: 8px 0;
     font-weight: 600;
     font-size: 20px;
+    line-height: 120%;
     color: var(--content);
     position: relative;
 }
@@ -77,6 +98,7 @@ body {
     border-color: var(--cherry-light);
     color: var(--cherry-light);
     margin-top: 8px;
+    line-height: 120%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -92,6 +114,8 @@ body {
 /* MOBILE NAVIGATION */
 .nav-mobile-header {
     display: flex;
+    padding: 16px;
+    background-color: var(--background-1);
 }
 
 @media screen and (min-width: 1024px) {
@@ -108,4 +132,45 @@ body {
     border-bottom: 1px solid var(--content);
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* HERO */
+.hero {
+    background-image: url("../media/hero-mobile.webp");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* menu height + gap */
+    margin-top: calc(64px + 10px);
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+   .hero {
+        background-image: url("../media/hero-desktop.webp");
+        /* menu height + gap */
+        margin-top: calc(92px + 16px);
+        align-items: flex-end;
+    }
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--background-1);
+    text-align: center;
+    max-width: 200px;
+    margin-bottom: unset;
+}
+
+@media screen and (min-width: 1024px) {
+   .hero h1 {
+        font-size: 206px;
+        line-height: 250px;
+        max-width: unset;
+        margin-bottom: 16px;
+    }
 }
