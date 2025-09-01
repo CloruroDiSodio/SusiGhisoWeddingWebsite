@@ -15,7 +15,9 @@
     <!-- NAV DESKTOP -->
     <nav class="nav-desktop fixed top-0 left-0 w-full flex justify-between items-center">
         <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
-        <div id="menu-items"></div>
+        <div>
+            <ul id="menu-items" class="flex gap-10 items-center"></ul>
+        </div>
     </nav>
 
     <!-- MOBILE TRIGGER -->
@@ -29,7 +31,7 @@
     </div>
 
     <!-- NAV MOBILE -->
-    <nav class="nav-mobile pointer-events-none opacity-0 absolute top-0 left-0 w-full h-full p-4 bg-white">
+    <nav class="nav-mobile pointer-events-none opacity-0 transition-opacity duration-300 absolute top-0 left-0 w-full h-full p-4 bg-white">
         <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
         <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
         <button class="nav-mobile-close" aria-label="Close menu">
@@ -41,7 +43,9 @@
             </svg>
         </button>
         </div>
-        <div id="menu-items-mobile"></div>
+        <div>
+            <ul id="menu-items-mobile" class="flex flex-col items-start justify-center gap-1 h-full text-lg"></ul>
+        </div>
     </nav>
 
     <!-- HERO -->

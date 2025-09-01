@@ -1,29 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
+//////////// CONFIG
+
+const menuItemsDescriptor = [
+  {label: 'Dettagli', href: '#dettagli', outerClassList: ['nav-item']},
+  {label: 'Regalo di nozze', href: '#regalo-di-nozze', outerClassList: ['nav-item']},
+  {label: 'Q&A', href: '#q-and-a', outerClassList: ['nav-item']},
+  {label: 'RSVP', href: '/rsvp', outerClassList: ['button-small', 'nav-item-rsvp']},
+];
+
+//////////// END CONFIG
+
+const getMenuItemsElement = (menuItems) => {
+  return menuItems.map(({label, href, outerClassList}) => {
+    const li = document.createElement('li');
+    li.classList.add(...outerClassList);
+
+    const a = document.createElement('a');
+    a.innerText = label;
+    a.href = href;
+
+    li.appendChild(a);
+
+    return li;
+  });
+};
+
+const generateNavigationMenu = (menuItemsDescriptor) => {
+  const menuItems = getMenuItemsElement(menuItemsDescriptor);
+
+  // Desktop menu
+  document.querySelector("#menu-items").appendChild(menuItems);
+
+  // Mobile menu
+  document.querySelector("#menu-items-mobile").appendChild(menuItems);
+};
+
+const setupMobileMenu = () => {
   const mobileMenu = document.querySelector(".nav-mobile");
   const openBtn = document.querySelector(".nav-mobile-trigger");
   const closeBtn = document.querySelector(".nav-mobile-close");
 
-  const menuItems = `
-    <li class="nav-item"><a href="#dettagli">Dettagli</a></li>
-    <li class="nav-item"><a href="#regaloNozze">Regalo di nozze</a></li>
-    <li class="nav-item"><a href="#qea">Q&A</a></li>
-    <li class="button-small nav-item-rsvp"><a href="/rsvp">RSVP</a></li>
-  `;
-
-  // Desktop menu
-  document.getElementById("menu-items").innerHTML = `<ul class="flex gap-10 items-center">${menuItems}</ul>`;
-
-  // Mobile menu
-  document.getElementById("menu-items-mobile").innerHTML = `
-    <ul class="flex flex-col items-start justify-center gap-1 h-full text-lg">
-      ${menuItems}
-    </ul>
-  `;
-
   const links = document.querySelectorAll(".nav-mobile a");
-
-  // Initial mobile menu state
-  mobileMenu.classList.add("opacity-0", "pointer-events-none", "transition-opacity", "duration-300");
 
   // Open menu with fade-in
   const openMenu = () => {
@@ -38,4 +54,43 @@ document.addEventListener("DOMContentLoaded", () => {
   openBtn.addEventListener("click", openMenu);
   closeBtn.addEventListener("click", closeMenu);
   links.forEach(link => link.addEventListener("click", closeMenu));
+};
+
+const menu = (() => ({
+  descriptor: [],
+  generate() {
+    const menuItems = getMenuItemsElement(this.descriptor);
+
+    // Desktop menu
+    document.querySelector("#menu-items").appendChild(menuItems);
+
+    // Mobile menu
+    document.querySelector("#menu-items-mobile").appendChild(menuItems);
+  },
+  openMobileMenu() {
+    this._mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+  },
+  closeMobileMenu() {
+    this._mobileMenu.classList.add("opacity-0", "pointer-events-none");
+  },
+  setup() {
+    this.generate();
+
+    this._mobileMenu = document.querySelector(".nav-mobile");
+
+    const openBtn = document.querySelector(".nav-mobile-trigger");
+    const closeBtn = document.querySelector(".nav-mobile-close");
+
+    const links = document.querySelectorAll(".nav-mobile a");
+
+    openBtn.addEventListener("click", this.openMobileMenu.bind(this));
+    closeBtn.addEventListener("click", this.closeMobileMenu.bind(this));
+    links.forEach(link => link.addEventListener("click", this.closeMobileMenu.bind(this)));
+
+    window.addEventListener('resize', this.closeMobileMenu.bind(this));
+  },
+}))();
+
+document.addEventListener("DOMContentLoaded", () => {
+  menu.setup();
 });
