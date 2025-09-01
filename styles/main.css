@@ -17,24 +17,9 @@
 
 /* BODY */
 html, body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
     font-family: "EB Garamond", serif;
-    padding: 0 16px 16px;
-    display: flex;
-    flex-direction: column;
-    column-gap: 10px;
 }
 
-@media screen and (min-width: 1024px) {
-    body {
-        padding: 0 32px 24px;
-        column-gap: 16px;
-    }
-}
 
 /* Utility */
 
@@ -58,15 +43,7 @@ body {
 
 /* DESKTOP NAVIGATION */
 .nav-desktop {
-    padding: 24px 32px;
-    display: none;
     background-color: var(--background-1);
-}
-
-@media screen and (min-width: 1024px) {
-    .nav-desktop {
-        display: flex;
-    }
 }
 
 .nav-item {
@@ -104,7 +81,7 @@ body {
 @media screen and (min-width: 1024px) {
     .nav-item-rsvp {
         margin-top: unset;
-}
+    }
 }
 
 .nav-item-rsvp:hover {
@@ -113,15 +90,7 @@ body {
 
 /* MOBILE NAVIGATION */
 .nav-mobile-header {
-    display: flex;
-    padding: 16px;
     background-color: var(--background-1);
-}
-
-@media screen and (min-width: 1024px) {
-   .nav-mobile-header {
-        display: none;
-    }
 }
 
 .nav-mobile {
@@ -136,24 +105,14 @@ body {
 
 /* HERO */
 .hero {
-    background-image: url("../media/hero-mobile.webp");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    /* menu height + gap */
-    margin-top: calc(64px + 10px);
-    align-items: center;
-    justify-content: center;
+    background: transparent url("../media/hero-mobile.webp") center center / cover no-repeat;
+    height: calc(100vh - 64px - 16px);
 }
 
 @media screen and (min-width: 1024px) {
    .hero {
+        height: calc(100vh - 92px - 24px);
         background-image: url("../media/hero-desktop.webp");
-        /* menu height + gap */
-        margin-top: calc(92px + 16px);
-        align-items: flex-end;
     }
 }
 
@@ -161,9 +120,7 @@ body {
     font-size: 64px;
     line-height: 100%;
     color: var(--background-1);
-    text-align: center;
     max-width: 200px;
-    margin-bottom: unset;
 }
 
 @media screen and (min-width: 1024px) {
@@ -171,6 +128,5 @@ body {
         font-size: 206px;
         line-height: 250px;
         max-width: unset;
-        margin-bottom: 16px;
     }
 }

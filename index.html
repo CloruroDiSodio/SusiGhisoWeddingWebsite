@@ -10,16 +10,16 @@
   <link rel="stylesheet" href="styles/main.css">
   <title>Susi & Ghiso Wedding</title>
 </head>
-<body class="relative">
+<body>
 
     <!-- NAV DESKTOP -->
-    <nav class="nav-desktop fixed top-0 left-0 w-full flex justify-between items-center">
+    <nav class="nav-desktop hidden lg:flex justify-between items-center sticky top-0 left-0 py-6 px-8">
         <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
         <div id="menu-items"></div>
     </nav>
 
     <!-- MOBILE TRIGGER -->
-    <div class="nav-mobile-header justify-between items-center w-full absolute top-0 left-0">
+    <div class="nav-mobile-header flex lg:hidden justify-between items-center sticky top-0 left-0 p-4">
         <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
         <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
             <svg height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@
     </div>
 
     <!-- NAV MOBILE -->
-    <nav class="nav-mobile pointer-events-none opacity-0 absolute top-0 left-0 w-full h-full p-4 bg-white">
+    <nav class="nav-mobile pointer-events-none opacity-0 block lg:hidden fixed top-0 left-0 w-full h-full p-4 bg-white">
         <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
         <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
         <button class="nav-mobile-close" aria-label="Close menu">
@@ -44,10 +44,13 @@
         <div id="menu-items-mobile"></div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero rounded-48 flex">
-        <h1 class="font-family-italiana">19 Giugno 2026</h1>
-    </section>
+    <main class="main-content flex flex-col gap-4 lg:gap-8 px-4 pb-4 lg:px-8 lg:pb-6">
+        <!-- HERO -->
+        <section class="hero rounded-48 flex justify-center items-center lg:items-end w-full">
+            <h1 class="font-family-italiana text-center mb-0 lg:mb-4">19 Giugno 2026</h1>
+        </section>
+    </main>
+
 
   <script src="js/main.js"></script>
 </body>
