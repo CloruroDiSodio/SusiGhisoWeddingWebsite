@@ -71,6 +71,16 @@ html, body {
     }
 }
 
+section {
+    scroll-margin-top: calc(64px + 16px);
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        scroll-margin-top: calc(92px + 24px);
+    }
+}
+
 /* TYPOGRAPHY */
 
 h2 {
