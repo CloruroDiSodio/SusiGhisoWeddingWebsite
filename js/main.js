@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuItems = `
     <li class="nav-item"><a href="#dettagli">Dettagli</a></li>
-    <li class="nav-item"><a href="#regaloNozze">Regalo di nozze</a></li>
+    <li class="nav-item"><a href="#regalo-nozze">Regalo di nozze</a></li>
     <li class="nav-item"><a href="#qea">Q&A</a></li>
     <li class="button-small nav-item-rsvp"><a href="/rsvp">RSVP</a></li>
   `;

@@ -16,10 +16,13 @@
 }
 
 /* BODY */
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     font-family: "EB Garamond", serif;
 }
-
 
 /* Utility */
 
@@ -31,6 +34,22 @@ html, body {
     font-family: "Italiana", serif;
 }
 
+.color-cherry-light {
+    color: var(--cherry-light);
+}
+
+.color-dark-blue {
+    color: var(--dark-blue);
+}
+
+.bg-cherry-dark {
+    background-color: var(--cherry-dark);
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+
 /* UI */
 .button-small {
     border: 2px solid;
@@ -39,6 +58,55 @@ html, body {
     font-weight: 600;
     font-size: 20px;
     transition: background-color 0.3s;
+}
+
+.vertical-divider {
+    height: 80px;
+    width: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+    .vertical-divider {
+        height: 110px;
+    }
+}
+
+/* TYPOGRAPHY */
+
+h2 {
+    font-size: 54px;
+    line-height: 110%;
+}
+
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 96px;
+    }
+}
+
+h4 {
+ font-size: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+    h4 {
+        font-size: 36px;
+    }
+}
+
+.paragraph-1 {
+    font-size: 20px;
+    line-height: 120%;
+}
+
+@media screen and (min-width: 1024px) {
+    .paragraph-1 {
+        font-size: 28px;
+    }
+}
+
+.paragraph-2 {
+    font-size: 20px;
 }
 
 /* DESKTOP NAVIGATION */
@@ -129,4 +197,85 @@ html, body {
         line-height: 250px;
         max-width: unset;
     }
+}
+
+/* DETTAGLI */
+
+.dettagli {
+    background-color: var(--pink-light);
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1024px) {
+   .dettagli {
+        width: 50%;
+   }
+}
+
+.dettagli-img {
+    background: transparent url("../media/cherries-pink.webp") center center / cover no-repeat;
+    width: 100%;
+    min-height: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+   .dettagli-img {
+        width: 50%;
+        min-height: 765px;
+   }
+}
+
+/* DETTAGLI */
+
+.dettagli {
+    background-color: var(--pink-light);
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1024px) {
+   .dettagli {
+        width: 50%;
+   }
+}
+
+.dettagli-img {
+    background: transparent url("../media/cherries-pink.webp") center center / cover no-repeat;
+    width: 100%;
+    min-height: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+   .dettagli-img {
+        width: 50%;
+        min-height: 765px;
+   }
+}
+
+/* REGALO NOZZE */
+
+.regalo-nozze {
+    background-color: var(--light-blue);
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1024px) {
+   .regalo-nozze {
+        width: 50%;
+   }
+}
+
+.regalo-nozze-img {
+    background: transparent url("../media/giappone.webp") center center / cover no-repeat;
+    width: 100%;
+    min-height: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+   .regalo-nozze-img {
+        width: 50%;
+        min-height: 765px;
+   }
 }
