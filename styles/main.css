@@ -117,10 +117,10 @@ html, body {
 }
 
 .hero h1 {
-    font-size: 64px;
+    font-size: 80px;
     line-height: 100%;
     color: var(--background-1);
-    max-width: 200px;
+    max-width: 250px;
 }
 
 @media screen and (min-width: 1024px) {
