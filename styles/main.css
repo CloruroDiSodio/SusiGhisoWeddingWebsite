@@ -34,22 +34,6 @@ html, body {
     font-family: "Italiana", serif;
 }
 
-.color-cherry-light {
-    color: var(--cherry-light);
-}
-
-.color-dark-blue {
-    color: var(--dark-blue);
-}
-
-.bg-cherry-dark {
-    background-color: var(--cherry-dark);
-}
-
-.bg-dark-blue {
-    background-color: var(--dark-blue);
-}
-
 /* UI */
 .button-small {
     border: 2px solid;
@@ -57,6 +41,15 @@ html, body {
     border-radius: 4px;
     font-weight: 600;
     font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.button-large {
+    border: 2px solid;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 32px;
     transition: background-color 0.3s;
 }
 
@@ -262,6 +255,21 @@ h4 {
         min-height: 765px;
    }
 }
+
+/* RSVP SECTION */
+
+.cherries-green {
+    background: transparent url("../media/cherries-green.webp") center center / cover no-repeat;
+    width: 66%;
+    min-height: 527px;
+}
+
+.rsvp-img {
+    background: transparent url("../media/RSVP_Section.webp") center center / cover no-repeat;
+    width: 33%;
+    min-height: 527px;
+}
+
 
 /* REGALO NOZZE */
 
