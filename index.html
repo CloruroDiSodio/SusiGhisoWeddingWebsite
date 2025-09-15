@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <title>Susi & Ghiso Wedding</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Susi & Ghiso Wedding</title>
 </head>
 <body>
 
     <!-- NAV DESKTOP -->
     <nav class="nav-desktop hidden lg:flex justify-between items-center sticky top-0 left-0 py-6 px-8">
-        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
+        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
         <div id="menu-items"></div>
     </nav>
 
     <!-- MOBILE TRIGGER -->
     <div class="nav-mobile-header flex lg:hidden justify-between items-center sticky top-0 left-0 p-4">
-        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding">
+        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
         <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
             <svg height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -65,7 +65,7 @@
 
         <!-- RSVP -->
         <section>
-            <div class="bg-[color:var(--light-green)] flex flex-col justify-center align-bottom lg:pt-32 lg:py-0 py-8 lg:px-0 px-4 lg:rounded-t-full rounded-4xl gap-8">
+            <div class="bg-[color:var(--light-green)] flex flex-col justify-end align-bottom lg:pt-32 lg:py-0 py-8 lg:px-0 px-4 lg:rounded-t-full rounded-4xl gap-8">
                 <p class="paragraph-1 text-[color:var(--dark-green)] text-center">Ama qui c’è del gaso</p>
                 <h2 class="font-family-italiana text-[color:var(--dark-green)] text-center">Facci sapere<br/>se ci sarai</h2>
                 <a class="button-large mx-auto" href="/rsvp">RSVP</a>
@@ -91,6 +91,14 @@
             <div class="regalo-nozze-img rounded-48"></div>
         </section>
     </main>
+
+    <!-- FOOTER-->
+    <footer class="rounded-48 lg:py-10 py-8 lg:px-10 px-4 bg-[color:var(--background-2)] lg:mx-8 mx-4 lg:mb-8 mb-4 flex flex-col justify-center items-center gap-4">
+        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-25">
+        <p class="text-center caption">Questo sito è stato realizzato grazie alla pazienza e al buon cuore di Denise Moscon e Sergio Terrasi.<br/>
+            Le fotografie sono opera di Filippo Manfroi (aka Brododigocciole), le illustrazioni sono opera di Desirée Ciofi.
+        </p>
+    </footer>
 
   <script src="js/main.js"></script>
 </body>
