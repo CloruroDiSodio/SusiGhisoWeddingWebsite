@@ -74,6 +74,15 @@ section {
     }
 }
 
+.input-text {
+    background-color: var(--background-1);
+    width: 100%;
+    border: 1px solid var(--content);
+    border-radius: 8px;
+    min-height: 32px;
+    padding: 8px;
+}
+
 /* TYPOGRAPHY */
 
 h2 {
@@ -307,4 +316,12 @@ h4 {
         width: 50%;
         min-height: 765px;
    }
+}
+
+/* RSVP */
+
+.rsvp-form-img {
+    background: transparent url("../media/RSVP_Page.webp") center center / cover no-repeat;
+    width: 50%;
+    min-height: 400px;
 }

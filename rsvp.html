@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Susi & Ghiso Wedding</title>
+</head>
+<body>
+    
+    <!-- NAV DESKTOP -->
+    <nav class="nav-desktop hidden lg:flex justify-between items-center sticky top-0 left-0 py-6 px-8">
+        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
+        <div id="menu-items"></div>
+    </nav>
+    
+    <!-- MOBILE TRIGGER -->
+    <div class="nav-mobile-header flex lg:hidden justify-between items-center sticky top-0 left-0 p-4">
+        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
+        <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
+            <svg height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- NAV MOBILE -->
+    <nav class="nav-mobile pointer-events-none opacity-0 block lg:hidden fixed top-0 left-0 w-full h-full p-4 bg-white">
+        <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
+            <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
+            <button class="nav-mobile-close" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div id="menu-items-mobile"></div>
+    </nav>
+    
+    <main class="flex flex-col gap-4 lg:gap-8 mx-4 mb-4 lg:mx-8 lg:mb-6 bg-[color:var(--background-2)] py-8 lg:py-10 px-4 lg:px-10 rounded-48">
+        <section>
+            <h1 class="font-[Italiana] text-[54px] leading-[110%] text-center lg:text-left text-[color:var(--cherry-light)] lg:text-[96px] lg:text-left mb-4">Matrimonio Susi & Ghiso</h1>
+            <p class="paragraph-2 text-[color:var(--cherry-light)] text-center lg:text-left">(O per i più raffinati Susanna e Davide)</p>
+        </section>
+        <section class="flex justify-between">
+            <form class="flex flex-col gap-4 lg:gap-8">
+                <h4 class="text-[color:var(--cherry-dark)]">Facci sapere se ci sarai</h4>
+                <div>
+                    <input type="radio" id="si" name="partecipazione" value="si">
+                    <label for="html" class="paragraph-2 mr-8 ml-1 font-semibold">Parteciperò</label>
+                    <br class="lg:hidden block"/>
+                    <input type="radio" id="no" name="partecipazione" value="no">
+                    <label for="css" class="paragraph-2 font-semibold ml-1">Non parteciperò :&#40;</label>
+                </div>
+                <div>
+                    <label for="nome" class="paragraph-2 font-semibold">Nome *</label><br/>
+                    <input type="text" id="nome" name="nome" class="input-text">
+                </div>
+                <div>
+                    <label for="cognome" class="paragraph-2 font-semibold">Cognome *</label><br/>
+                    <input type="text" id="cognome" name="cognome" class="input-text">
+                </div>
+                <div>
+                    <label for="intolleranze" class="paragraph-2 font-semibold">Intolleranze *</label><br/>
+                    <textarea id="intolleranze" name="intolleranze" class="input-text" rows="4"></textarea>
+                </div>
+                <div>
+                    <p class="paragraph-2 font-semibold mb-2">Vuoi che ti consigliamo una sistemazione per la notte?*</p>
+                    <input type="radio" id="si" name="alloggio" value="si">
+                    <label for="html" class="paragraph-2 mr-8 ml-1 font-semibold">YES PLEASE</label>
+                    <br class="lg:hidden block"/>
+                    <input type="radio" id="no" name="alloggio" value="no">
+                    <label for="css" class="paragraph-2 ml-1 font-semibold">No, faccio da me</label>
+                </div>
+                <button type="submit" class="button-small nav-item-rsvp w-20 cursor-pointer lg:mx-0 mx-auto">Invia</button>
+            </form>
+            <div class="rsvp-form-img rounded-48 lg:block hidden"></div>
+        </section>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
