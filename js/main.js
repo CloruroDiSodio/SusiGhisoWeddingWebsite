@@ -21,4 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
   openBtn.addEventListener("click", openMenu);
   closeBtn.addEventListener("click", closeMenu);
   links.forEach(link => link.addEventListener("click", closeMenu));
+
+
+  // RSVP
+  document.getElementById("rsvp-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const partecipazione = formData.get("partecipazione"); 
+
+    try {
+        // TODO CHANGE ZAPIER HOOK
+        let response = await fetch("https://hooks.zapier.com/hooks/catch/24747380/u1kk1l8/", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            if (partecipazione && partecipazione.toLowerCase() === "si") {
+                window.location.href = "thank-you.html?yes"; // FIX REDIRECT HERE
+            } else {
+                window.location.href = "thank-you.html?no"; // FIX REDIRECT HERE
+            }
+        } else {
+            alert("C'è stato un errore, riprova per favore!");
+        }
+    } catch (error) {
+        alert("Errore di connessione, riprova!");
+    }
+  });
 });

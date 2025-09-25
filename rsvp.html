@@ -62,25 +62,25 @@
             <p class="paragraph-2 text-[color:var(--cherry-light)] text-center lg:text-left">(O per i più raffinati Susanna e Davide)</p>
         </section>
         <section class="flex justify-between">
-            <form class="flex flex-col gap-4 lg:gap-8">
+            <form id="rsvp-form" class="flex flex-col gap-4 lg:gap-8"> 
                 <h4 class="text-[color:var(--cherry-dark)]">Facci sapere se ci sarai</h4>
                 <div class="flex flex-col lg:flex-row gap-4">
                     <div class="flex items-center">
-                        <input type="radio" id="si" name="partecipazione" value="si">
+                        <input type="radio" id="si" name="partecipazione" value="si" required>
                         <label for="html" class="paragraph-2 mr-8 ml-2 font-semibold">Parteciperò</label>
                     </div>
                     <div class="flex items-center">
-                        <input type="radio" id="no" name="partecipazione" value="no">
+                        <input type="radio" id="no" name="partecipazione" value="no" required>
                         <label for="css" class="paragraph-2 font-semibold ml-2">Non parteciperò :&#40;</label>
                     </div>
                 </div>
                 <div>
                     <label for="nome" class="paragraph-2 font-semibold">Nome *</label><br/>
-                    <input type="text" id="nome" name="nome" class="input-text">
+                    <input type="text" id="nome" name="nome" class="input-text" required>
                 </div>
                 <div>
                     <label for="cognome" class="paragraph-2 font-semibold">Cognome *</label><br/>
-                    <input type="text" id="cognome" name="cognome" class="input-text">
+                    <input type="text" id="cognome" name="cognome" class="input-text" required>
                 </div>
                 <div>
                     <label for="intolleranze" class="paragraph-2 font-semibold">Intolleranze *</label><br/>
@@ -90,11 +90,11 @@
                     <p class="paragraph-2 font-semibold mb-2">Vuoi che ti consigliamo una sistemazione per la notte?*</p>
                     <div class="flex flex-col lg:flex-row gap-4">
                         <div class="flex items-center">
-                            <input type="radio" id="si" name="alloggio" value="si">
+                            <input type="radio" id="si" name="alloggio" value="si" required>
                             <label for="html" class="paragraph-2 mr-8 ml-2 font-semibold">YES PLEASE</label>
                         </div>
                         <div class="flex items-center">
-                            <input type="radio" id="no" name="alloggio" value="no">
+                            <input type="radio" id="no" name="alloggio" value="no" required>
                             <label for="css" class="paragraph-2 ml-2 font-semibold">No, faccio da me</label>
                         </div>    
                     </div>
