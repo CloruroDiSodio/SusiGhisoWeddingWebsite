@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (response.ok) {
             if (partecipazione && partecipazione.toLowerCase() === "si") {
-                window.location.href = "thank-you.html?yes"; // FIX REDIRECT HERE
+                window.location.href = "thank-you.html?answer=8000e";
             } else {
-                window.location.href = "thank-you.html?no"; // FIX REDIRECT HERE
+                window.location.href = "thank-you.html?answer=6f8db";
             }
         } else {
             alert("C'è stato un errore, riprova per favore!");
