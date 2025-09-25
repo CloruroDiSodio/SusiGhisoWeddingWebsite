@@ -50,12 +50,15 @@
         <section class="flex justify-between">
             <form class="flex flex-col gap-4 lg:gap-8">
                 <h4 class="text-[color:var(--cherry-dark)]">Facci sapere se ci sarai</h4>
-                <div>
-                    <input type="radio" id="si" name="partecipazione" value="si">
-                    <label for="html" class="paragraph-2 mr-8 ml-1 font-semibold">Parteciperò</label>
-                    <br class="lg:hidden block"/>
-                    <input type="radio" id="no" name="partecipazione" value="no">
-                    <label for="css" class="paragraph-2 font-semibold ml-1">Non parteciperò :&#40;</label>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <div class="flex items-center">
+                        <input type="radio" id="si" name="partecipazione" value="si">
+                        <label for="html" class="paragraph-2 mr-8 ml-2 font-semibold">Parteciperò</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="no" name="partecipazione" value="no">
+                        <label for="css" class="paragraph-2 font-semibold ml-2">Non parteciperò :&#40;</label>
+                    </div>
                 </div>
                 <div>
                     <label for="nome" class="paragraph-2 font-semibold">Nome *</label><br/>
@@ -71,11 +74,16 @@
                 </div>
                 <div>
                     <p class="paragraph-2 font-semibold mb-2">Vuoi che ti consigliamo una sistemazione per la notte?*</p>
-                    <input type="radio" id="si" name="alloggio" value="si">
-                    <label for="html" class="paragraph-2 mr-8 ml-1 font-semibold">YES PLEASE</label>
-                    <br class="lg:hidden block"/>
-                    <input type="radio" id="no" name="alloggio" value="no">
-                    <label for="css" class="paragraph-2 ml-1 font-semibold">No, faccio da me</label>
+                    <div class="flex flex-col lg:flex-row gap-4">
+                        <div class="flex items-center">
+                            <input type="radio" id="si" name="alloggio" value="si">
+                            <label for="html" class="paragraph-2 mr-8 ml-2 font-semibold">YES PLEASE</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="no" name="alloggio" value="no">
+                            <label for="css" class="paragraph-2 ml-2 font-semibold">No, faccio da me</label>
+                        </div>    
+                    </div>
                 </div>
                 <button type="submit" class="button-small nav-item-rsvp w-20 cursor-pointer lg:mx-0 mx-auto">Invia</button>
             </form>
