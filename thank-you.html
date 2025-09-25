@@ -14,13 +14,20 @@
     
     <!-- NAV DESKTOP -->
     <nav class="nav-desktop hidden lg:flex justify-between items-center sticky top-0 left-0 py-6 px-8">
-        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
-        <div id="menu-items"></div>
+        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
+        <div id="menu-items">
+            <ul class="flex gap-10 items-center">
+                <li class="nav-item"><a href="index.html#dettagli">Dettagli</a></li>
+                <li class="nav-item"><a href="index.htm#regalo-nozze">Regalo di nozze</a></li>
+                <li class="nav-item"><a href="q-and-a.html">Q&A</a></li>
+                <li class="button-small nav-item-rsvp"><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </div>
     </nav>
     
     <!-- MOBILE TRIGGER -->
     <div class="nav-mobile-header flex lg:hidden justify-between items-center sticky top-0 left-0 p-4">
-        <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
+        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
         <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
             <svg height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -31,7 +38,7 @@
     <!-- NAV MOBILE -->
     <nav class="nav-mobile pointer-events-none opacity-0 block lg:hidden fixed top-0 left-0 w-full h-full p-4 bg-white">
         <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
-            <img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15">
+            <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
             <button class="nav-mobile-close" aria-label="Close menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"/>
@@ -39,7 +46,14 @@
                 </svg>
             </button>
         </div>
-        <div id="menu-items-mobile"></div>
+        <div id="menu-items-mobile">
+            <ul class="flex flex-col items-start justify-center gap-1 h-full text-lg">
+                <li class="nav-item"><a href="index.html#dettagli">Dettagli</a></li>
+                <li class="nav-item"><a href="index.htm#regalo-nozze">Regalo di nozze</a></li>
+                <li class="nav-item"><a href="q-and-a.html">Q&A</a></li>
+                <li class="button-small nav-item-rsvp"><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </div>
     </nav>
     
     <main class="flex flex-col gap-4 lg:gap-8 mx-4 mb-4 lg:mx-8 lg:mb-6 bg-[color:var(--background-2)] py-8 lg:py-10 px-4 lg:px-10 rounded-48">

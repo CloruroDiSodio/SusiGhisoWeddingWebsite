@@ -151,7 +151,7 @@ h4 {
     position: relative;
 }
 
-.nav-item::after {
+.nav-item::after, .nav-item-active:after {
     content: '';
     display: block;
     position: absolute;
@@ -163,7 +163,7 @@ h4 {
     transition: width 0.3s;
 }
 
-.nav-item:hover::after {
+.nav-item:hover::after, .nav-item-active:after {
     width: 100%;
 }
 

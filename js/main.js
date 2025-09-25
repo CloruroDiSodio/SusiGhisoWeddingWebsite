@@ -3,23 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.querySelector(".nav-mobile-trigger");
   const closeBtn = document.querySelector(".nav-mobile-close");
 
-  const menuItems = `
-    <li class="nav-item"><a href="#dettagli">Dettagli</a></li>
-    <li class="nav-item"><a href="#regalo-nozze">Regalo di nozze</a></li>
-    <li class="nav-item"><a href="q-and-a">Q&A</a></li>
-    <li class="button-small nav-item-rsvp"><a href="rsvp">RSVP</a></li>
-  `;
-
-  // Desktop menu
-  document.getElementById("menu-items").innerHTML = `<ul class="flex gap-10 items-center">${menuItems}</ul>`;
-
-  // Mobile menu
-  document.getElementById("menu-items-mobile").innerHTML = `
-    <ul class="flex flex-col items-start justify-center gap-1 h-full text-lg">
-      ${menuItems}
-    </ul>
-  `;
-
   const links = document.querySelectorAll(".nav-mobile a");
 
   // Initial mobile menu state
