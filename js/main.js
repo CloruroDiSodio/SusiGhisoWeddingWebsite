@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const partecipazione = formData.get("partecipazione"); 
 
     try {
-        // TODO CHANGE ZAPIER HOOK
-        let response = await fetch("https://hooks.zapier.com/hooks/catch/24747380/u1kk1l8/", {
+        let response = await fetch("https://hooks.zapier.com/hooks/catch/24797078/u1jpjk4/", {
             method: "POST",
             body: formData
         });
