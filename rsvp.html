@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
     <title>Susi & Ghiso Wedding</title>
 </head>
 <body>
     
     <!-- NAV DESKTOP -->
     <nav class="nav-desktop hidden lg:flex justify-between items-center sticky top-0 left-0 py-6 px-8">
-        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
+        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-[60px]"></a>
         <div id="menu-items">
             <ul class="flex gap-10 items-center">
                 <li class="nav-item"><a href="index.html#dettagli">Dettagli</a></li>
@@ -27,7 +26,7 @@
     
     <!-- MOBILE TRIGGER -->
     <div class="nav-mobile-header flex lg:hidden justify-between items-center sticky top-0 left-0 p-4">
-        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
+        <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-[60px]"></a>
         <button class="nav-mobile-trigger text-gray-700 focus:outline-none" aria-label="Open menu">
             <svg height="24" width="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -38,7 +37,7 @@
     <!-- NAV MOBILE -->
     <nav class="nav-mobile pointer-events-none opacity-0 block lg:hidden fixed top-0 left-0 w-full h-full p-4 bg-white">
         <div class="nav-mobile-actions flex justify-between items-center mb-4 border-b pb-4">
-            <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-15"></a>
+            <a href="index.html"><img src="media/logo.png" alt="Logo Susi & Ghiso Wedding" class="w-[60px]"></a>
             <button class="nav-mobile-close" aria-label="Close menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"/>
@@ -99,12 +98,15 @@
                         </div>    
                     </div>
                 </div>
-                <button type="submit" class="button-small nav-item-rsvp w-20 cursor-pointer lg:mx-0 mx-auto">Invia</button>
+                <button type="submit" class="button-small nav-item-rsvp w-[80px] cursor-pointer lg:mx-0 mx-auto">Invia</button>
             </form>
             <div class="rsvp-form-img rounded-48 lg:block hidden"></div>
         </section>
     </main>
     
+    <script>
+        document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="styles/main.css">');
+    </script>
     <script src="js/main.js"></script>
     <script src="js/rsvp-form.js"></script>
 </body>
